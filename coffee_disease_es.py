@@ -85,7 +85,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(brownYellowSpots=W())),salience = 1)
 	def symptom_1(self):
-		self.declare(Fact(brownYellowSpots=input("Brownish yellow spots appear on the leaf? : ")))
+		self.declare(Fact(brownYellowSpots=input("\nBrownish yellow spots appear on the leaf? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(leavesEasyFallen=W())),salience = 1)
 	def symptom_2(self):
@@ -93,7 +93,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(dullLeaves=W())),salience = 1)
 	def symptom_3(self):
-		self.declare(Fact(dullLeaves=input("Dull, shriveled, and hang leaves? : ")))
+		self.declare(Fact(dullLeaves=input("\nDull, shriveled, and hang leaves? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(orangePowder=W())),salience = 1)
 	def symptom_4(self):
@@ -101,7 +101,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(baldLeaves=W())),salience = 1)
 	def symptom_5(self):
-		self.declare(Fact(baldLeaves=input("Leaves become bald? : ")))
+		self.declare(Fact(baldLeaves=input("\nLeaves become bald? : ")))
 	 
 	@Rule(Fact(action='find_disease'), NOT(Fact(patchesLeaves=W())),salience = 1)
 	def symptom_6(self):
@@ -109,7 +109,7 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(prematureLeaves=W())),salience = 1)
 	def symptom_7(self):
-		self.declare(Fact(prematureLeaves=input("Premature and empty leaves? : ")))
+		self.declare(Fact(prematureLeaves=input("\nPremature and empty leaves? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(shortStem=W())),salience = 1)
 	def symptom_8(self):
@@ -117,7 +117,7 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rottenRoot=W())),salience = 1)
 	def symptom_9(self):
-		self.declare(Fact(rottenRoot=input("Decomposed and rotten root? : ")))
+		self.declare(Fact(rottenRoot=input("\nDecomposed and rotten root? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(fruitSpot=W())),salience = 1)
 	def symptom_10(self):
@@ -125,7 +125,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(fruitHalo=W())),salience = 1)
 	def symptom_11(self):
-		self.declare(Fact(fruitHalo=input("Circular spots appear on fruit forming a halo? : ")))
+		self.declare(Fact(fruitHalo=input("\nCircular spots appear on fruit forming a halo? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootSoilGrain=W())),salience = 1)
 	def symptom_12(self):
@@ -133,7 +133,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootYarnBlack=W())),salience = 1)
 	def symptom_13(self):
-		self.declare(Fact(rootYarnBlack=input("Roots have woven yarn blackish brown fungus? : ")))
+		self.declare(Fact(rootYarnBlack=input("\nRoots have woven yarn blackish brown fungus? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootBlackSpot=W())),salience = 1)
 	def symptom_14(self):
@@ -141,7 +141,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(stemBlackSpot=W())),salience = 1)
 	def symptom_15(self):
-		self.declare(Fact(stemBlackSpot=input("Black spots on the stem? : ")))
+		self.declare(Fact(stemBlackSpot=input("\nBlack spots on the stem? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootWovenWhite=W())),salience = 1)
 	def symptom_16(self):
@@ -149,7 +149,7 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(stemSilk=W())),salience = 1)
 	def symptom_17(self):
-		self.declare(Fact(stemSilk=input("Stem has a thin threads of fungi such as silk? : ")))
+		self.declare(Fact(stemSilk=input("\nStem has a thin threads of fungi such as silk? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(stemNecrosis=W())),salience = 1)
 	def symptom_18(self):
@@ -157,7 +157,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(fruitNecrosis=W())),salience = 1)
 	def symptom_19(self):
-		self.declare(Fact(fruitNecrosis=input("Fruit necrosis? : ")))
+		self.declare(Fact(fruitNecrosis=input("\nFruit necrosis? : ")))
 
 	@Rule(Fact(action='find_disease'),Fact(yellowLeaves="yes"),OR(Fact(brownYellowSpots="yes"),Fact(leavesEasyFallen="yes")),Fact(dullLeaves="no"),OR(Fact(orangePowder="yes"),Fact(baldLeaves="yes"),
 	Fact(patchesLeaves="yes")),OR(Fact(prematureLeaves="no"),Fact(shortStem="no"),Fact(rottenRoot="no")),OR(Fact(fruitSpot="no"),Fact(fruitHalo="no")),OR(Fact(rootSoilGrain="no"),Fact(rootYarnBlack="no")),
