@@ -11,8 +11,4 @@ Identifiable Diseases
  - Black Root Fungus
  - White Root Fungus
 
-I also referred the [code](https://github.com/ronak-07/Medical-Expert-System-Knowledge-Base) by ronak-07
-
-Feel free to use this program to implement your own programs. 
-
 Cheers !!
