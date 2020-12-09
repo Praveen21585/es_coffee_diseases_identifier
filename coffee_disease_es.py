@@ -40,7 +40,7 @@ def if_not_matched(disease):
 		print("")
 		id_disease = disease
 		disease_details = get_details(id_disease)
-		print("\n")
+		print("")
 		print("The most probable disease that your coffee plant have is %s\n" %(id_disease))
 		print("A short description of the disease is given below :\n")
 		print(disease_details+"\n")
