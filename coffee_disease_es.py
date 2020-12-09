@@ -40,8 +40,8 @@ def if_not_matched(disease):
 		print("")
 		id_disease = disease
 		disease_details = get_details(id_disease)
-		print("")
-		print("The most probable disease that you have is %s\n" %(id_disease))
+		print("\n")
+		print("The most probable disease that your coffee plant have is %s\n" %(id_disease))
 		print("A short description of the disease is given below :\n")
 		print(disease_details+"\n")
 
@@ -73,7 +73,7 @@ class Greetings(KnowledgeEngine):
 	def _initial_action(self):
 		print("")
 		print("\n\n              EXPERT SYSTEM IN DETECTING COFFEE PLANT DISEASES")
-		print("\nPlease answer a few questions about the plant conditions")
+		print("\n\nPlease answer a few questions about the plant conditions")
 		print("\nCan you see any of the following symptoms:")
 		print("\n")
 		yield Fact(action="find_disease")
