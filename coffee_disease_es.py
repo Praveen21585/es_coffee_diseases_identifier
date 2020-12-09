@@ -72,16 +72,16 @@ class Greetings(KnowledgeEngine):
 	@DefFacts()
 	def _initial_action(self):
 		print("")
-		print("Expert System in Detecting Coffee Plant Diseases")
-		print("Please answer a few questions about the plan conditions")
-		print("Can you see any of the following symptoms:")
-		print("")
+		print("\n\n              EXPERT SYSTEM IN DETECTING COFFEE PLANT DISEASES")
+		print("\nPlease answer a few questions about the plant conditions")
+		print("\nCan you see any of the following symptoms:")
+		print("\n")
 		yield Fact(action="find_disease")
 
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(yellowLeaves=W())),salience = 1)
 	def symptom_0(self):
-		self.declare(Fact(yellowLeaves=input("Leaves becomes yellow? : ")))
+		self.declare(Fact(yellowLeaves=input("\nLeaves becomes yellow? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(brownYellowSpots=W())),salience = 1)
 	def symptom_1(self):
@@ -89,7 +89,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(leavesEasyFallen=W())),salience = 1)
 	def symptom_2(self):
-		self.declare(Fact(leavesEasyFallen=input("Leaves becomes easily fallen? : ")))
+		self.declare(Fact(leavesEasyFallen=input("\nLeaves becomes easily fallen? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(dullLeaves=W())),salience = 1)
 	def symptom_3(self):
@@ -97,7 +97,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(orangePowder=W())),salience = 1)
 	def symptom_4(self):
-		self.declare(Fact(orangePowder=input("Leaves have orange powdery spots on the underside of leaves? : ")))
+		self.declare(Fact(orangePowder=input("\nLeaves have orange powdery spots on the underside of leaves? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(baldLeaves=W())),salience = 1)
 	def symptom_5(self):
@@ -105,7 +105,7 @@ class Greetings(KnowledgeEngine):
 	 
 	@Rule(Fact(action='find_disease'), NOT(Fact(patchesLeaves=W())),salience = 1)
 	def symptom_6(self):
-		self.declare(Fact(patchesLeaves=input("Patches spreading leaves? : ")))
+		self.declare(Fact(patchesLeaves=input("\nPatches spreading leaves? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(prematureLeaves=W())),salience = 1)
 	def symptom_7(self):
@@ -113,7 +113,7 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(shortStem=W())),salience = 1)
 	def symptom_8(self):
-		self.declare(Fact(shortStem=input("Short stem? : ")))
+		self.declare(Fact(shortStem=input("\nShort stem? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rottenRoot=W())),salience = 1)
 	def symptom_9(self):
@@ -121,7 +121,7 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(fruitSpot=W())),salience = 1)
 	def symptom_10(self):
-		self.declare(Fact(fruitSpot=input("Spots appear on fruit so it becomes rotten? : ")))
+		self.declare(Fact(fruitSpot=input("\nSpots appear on fruit so it becomes rotten? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(fruitHalo=W())),salience = 1)
 	def symptom_11(self):
@@ -129,7 +129,7 @@ class Greetings(KnowledgeEngine):
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootSoilGrain=W())),salience = 1)
 	def symptom_12(self):
-		self.declare(Fact(rootSoilGrain=input("Roots covered by a crust of soil grains? : ")))
+		self.declare(Fact(rootSoilGrain=input("\nRoots covered by a crust of soil grains? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootYarnBlack=W())),salience = 1)
 	def symptom_13(self):
@@ -137,15 +137,15 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootBlackSpot=W())),salience = 1)
 	def symptom_14(self):
-		self.declare(Fact(rootBlackSpot=input("Black spots on the roots? : ")))
+		self.declare(Fact(rootBlackSpot=input("\nBlack spots on the roots? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(stemBlackSpot=W())),salience = 1)
 	def symptom_15(self):
-		self.declare(Fact(stemBlackSpot=input("black spots on the stem? : ")))
+		self.declare(Fact(stemBlackSpot=input("Black spots on the stem? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(rootWovenWhite=W())),salience = 1)
 	def symptom_16(self):
-		self.declare(Fact(rootWovenWhite=input("Roots have woven threads of white fungus? : ")))
+		self.declare(Fact(rootWovenWhite=input("\nRoots have woven threads of white fungus? : ")))
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(stemSilk=W())),salience = 1)
 	def symptom_17(self):
@@ -153,7 +153,7 @@ class Greetings(KnowledgeEngine):
 	
 	@Rule(Fact(action='find_disease'), NOT(Fact(stemNecrosis=W())),salience = 1)
 	def symptom_18(self):
-		self.declare(Fact(stemNecrosis=input("Stem necrosis? : ")))
+		self.declare(Fact(stemNecrosis=input("\nStem necrosis? : ")))
 
 	@Rule(Fact(action='find_disease'), NOT(Fact(fruitNecrosis=W())),salience = 1)
 	def symptom_19(self):
