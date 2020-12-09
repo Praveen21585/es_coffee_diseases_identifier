@@ -276,7 +276,7 @@ class Greetings(KnowledgeEngine):
 
 	def not_matched(self,yellowLeaves, brownYellowSpots, leavesEasyFallen, dullLeaves, orangePowder, baldLeaves, patchesLeaves, prematureLeaves,shortStem ,rottenRoot ,
 	fruitSpot ,fruitHalo ,rootSoilGrain, rootYarnBlack, rootBlackSpot, stemBlackSpot, rootWovenWhite, stemSilk, stemNecrosis, fruitNecrosis):
-		print("\nDid not find any disease that matches given exact symptoms")
+		print("\n\nDid not find any disease that matches given exact symptoms")
 		lis = [yellowLeaves, brownYellowSpots, leavesEasyFallen, dullLeaves, orangePowder, baldLeaves, patchesLeaves, prematureLeaves,shortStem ,rottenRoot ,
 		fruitSpot ,fruitHalo ,rootSoilGrain, rootYarnBlack, rootBlackSpot, stemBlackSpot, rootWovenWhite, stemSilk, stemNecrosis, fruitNecrosis]
 		
@@ -301,7 +301,7 @@ if __name__ == "__main__":
 	while(1):
 		engine.reset()  # Prepare the engine for the execution.
 		engine.run()  # Run it!
-		print("Would you like to diagnose some other symptoms?")
+		print("Would you like to diagnose some other coffee plant disease with their symptoms?")
 		if input() == "no":
 			exit()
 		#print(engine.facts)
