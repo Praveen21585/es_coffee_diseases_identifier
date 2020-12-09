@@ -6,7 +6,7 @@ symptom_map = {}
 d_desc_map = {}
 
 def preprocess():
-	global diseases_list,diseases_symptoms,symptom_map,d_desc_map
+	global diseases_list,diseases_symptoms,symptom_map,d_desc_mapd
 	diseases = open("diseases.txt")
 	diseases_t = diseases.read()
 	diseases_list = diseases_t.split("\n")
